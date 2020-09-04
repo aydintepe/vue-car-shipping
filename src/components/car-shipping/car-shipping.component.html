@@ -1,0 +1,24 @@
+<v-container pa-3 class="grey lighten-5">
+  <v-row justify="center">
+    <v-col md="12">
+      <h2 class="text-center">What car are you shipping?</h2>
+    </v-col>
+  </v-row>
+  <v-divider></v-divider>
+  <v-row justify="center">
+    <v-col md="12">
+      <h4 class="mt-8">Select vehicle year, make and model</h4>
+    </v-col>
+    <v-col md="4">
+      <v-select :items="years" filled label="Select Year" item-text="year" v-model="year" @change="getMakes()">
+      </v-select>
+    </v-col>
+    <v-col md="4">
+      <v-select v-model="make" :items="makes" item-text="make" filled label="Select Make" @change="getModels()">
+      </v-select>
+    </v-col>
+    <v-col md="4">
+      <v-select :items="models" filled item-text="model"  label="Select Model" v-model="model"></v-select>
+    </v-col>
+  </v-row>
+</v-container>
